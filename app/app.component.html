@@ -1,0 +1,92 @@
+<!--NAVBAR-->
+<div class="container my-3">
+  <div class="shadow-lg rounded">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light m-3" style="background-color: #7dc9ffad;">
+      <a class="navbar-brand m-2" routerLink="inicio">Spectrum</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="inicio"><i class="fas fa-home m-1"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="cuestionario"><i class="fas fa-list-alt m-1"></i> Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="listaPersona"><i class="far fa-list-alt m-1"></i> Lista</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/nuevo"><i class="fas fa-plus-circle m-1"></i> Nuevo Persona</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<!--FIN DE NAVBAR-->
+
+<router-outlet></router-outlet>
+
+<!-- FOOTER -->
+<div class="container my-3 rounded">
+
+  <footer class="rounded shadow-lg">
+    <div class="container p-4 rounded">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-2 custom-warning">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: rgb(0, 136, 255);">SpecTrum</h5>
+          <p>
+            NOTA: La cumplimentación de este cuestionario interactivo no reemplaza en ningún caso una evaluación formal
+            a cargo de un profesional de la salud. Para la obtención de un diagnóstico y resultado 100% confiable, este
+            debe ser con una clínica o especialista autorizado.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 contact-div">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: rgb(0, 136, 255);">Contactos:</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-1">
+              <a href="#!" style="color: #4f4f4f;">Clinica 1</a>
+            </li>
+            <li class="mb-1">
+              <a href="#!" style="color: #4f4f4f;">Clinica 2</a>
+            </li>
+            <li class="mb-1">
+              <a href="#!" style="color: #4f4f4f;">Clinica 3</a>
+            </li>
+            <li>
+              <a href="#!" style="color: #4f4f4f;">Clinica 4</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 fuente-div">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: rgb(0, 136, 255);">Fuentes:</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-1">
+              <a href="#!" style="color: #4f4f4f;">Fuente 1</a>
+            </li>
+            <li class="mb-1">
+              <a href="#!" style="color: #4f4f4f;">Fuente 2</a>
+            </li>
+            <li class="mb-1">
+              <a href="#!" style="color: #4f4f4f;">Fuente 3</a>
+            </li>
+            <li>
+              <a href="#!" style="color: #4f4f4f;">Fuente 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-1" style="background-color: rgba(62, 62, 62, 0.2);">
+      © 2023 Copyright:
+      <p class="text-dark">Ulises Gojhan Garcia Patiño - Spectrum</p>
+    </div>
+    <!-- FIN DE FOOTER -->
+  </footer>
+
+</div>

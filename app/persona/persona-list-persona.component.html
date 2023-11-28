@@ -1,0 +1,33 @@
+<div class="container my-3">
+  <div class="shadow-lg rounded">
+    <table class="table">
+      <thead>
+        <tr id="tablita" class="m-2">
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Email</th>
+          <th scope="col">Ver</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="tablita" *ngFor="let persona of personas">
+          <td>{{persona.id}}</td>
+          <td>{{persona.nombre}}</td> 
+          <td>{{persona.apellido}}</td>
+          <td>{{persona.edad}}</td>
+          <td>{{persona.email}}</td>
+          <td><button class="btn btn-outline-primary" routerLink="/detalle/{{persona.id}}"><i class="far fa-eye"></i>
+              Ver</button></td>
+          <td><button class="btn btn-outline-warning" routerLink="/editar/{{persona.id}}"><i class="far fa-edit"></i>
+              Editar</button></td>
+          <td><button class="btn btn-outline-danger" (click)="borrar(persona.id)"><i class="far fa-trash-alt"></i>
+              Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

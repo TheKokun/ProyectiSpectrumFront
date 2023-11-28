@@ -1,0 +1,56 @@
+.navbar-brand {
+    letter-spacing: 2px;
+    color: rgb(0, 136, 255);
+    transition: color 0.3s ease; /* Transición de color al pasar el ratón */
+  }
+
+  .navbar-brand:hover {
+    color: #ffffff; /* Cambia el color al pasar el ratón */
+  }
+
+  .nav-item {
+    margin: 0 10px; /* Espaciado entre elementos del menú */
+    transition: background-color 0.3s ease; /* Transición de color de fondo al pasar el ratón */
+  }
+
+  .nav-item:hover {
+    background-color: #7dc9ff; /* Cambia el color de fondo al pasar el ratón */
+  }
+
+/*FOOTER*/
+.custom-warning {
+    border: 2px solid #ffc107;
+    /* Color de borde amarillo para la advertencia */
+    padding: 15px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    background-color: #fff3cd;
+    /* Color de fondo amarillo claro */
+}
+
+.custom-warning h5 {
+    color: #ff5722;
+    /* Color de texto naranja para el encabezado */
+}
+
+.custom-warning p {
+    color: #856404;
+    /* Color de texto marrón oscuro para el párrafo */
+}
+
+/* Estilo para los divs */
+.contact-div,
+.fuente-div {
+    margin-bottom: 20px;
+    /* Espacio entre los divs */
+    transition: transform 0.3s ease-in-out;
+    /* Agregamos transición de transformación */
+}
+
+/* Hover efecto */
+.contact-div:hover,
+.fuente-div:hover {
+    transform: scale(1.1);
+    /* Hace que el div se agrande ligeramente al pasar el ratón sobre él */
+}

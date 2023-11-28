@@ -1,0 +1,25 @@
+<div class="container my-3">
+  <div class="shadow-lg rounded">
+    <div class="m-2 p-3" *ngIf="persona">
+      <div class="col-md-6 mx-auto">
+        <div class="card m-3">
+          <div class="card-header text-center" style="background-color:azure;">
+            Registros
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Num registro: </b>{{persona.id}}</li>
+            <li class="list-group-item"><b>Nombre del paciente: </b>{{persona.nombre}}</li>
+            <li class="list-group-item"><b>Edad: </b>{{persona.edad}}</li>
+            <li class="list-group-item"><b>Nombre del Padre o Tutor: </b>{{persona.apellido}}</li>
+            <li class="list-group-item"><b>Email: </b>{{persona.email}}</li>
+
+          </ul>
+          <div class="card-footer" style="background-color: azure;">
+            <button class="btn btn-outline-primary btn-block" (click)="volver()"><i
+                class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

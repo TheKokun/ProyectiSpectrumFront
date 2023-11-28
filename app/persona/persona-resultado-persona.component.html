@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="card shadow-lg rounded">
+        <div class="card-body p-3">
+            <h3 class="display-5 text-primary" id="titulo">
+                <strong>ENTREVISTA PARA EL DIAGNÓSTICO DEL SÍNDROME DE ASPERGER (A.S.D.I.)</strong>
+            </h3>
+            <h5 class="text-muted" id="tituloB">Ch. Gillberg, C. Gillberg, M. Rastam y E Wentz.</h5>
+
+            <div class="p-4" id="TextInfo">
+                <h2 class="display-4 mb-4 text-primary">¿Qué es y cómo funciona?</h2>
+                <p class="lead">
+                    Es una herramienta clínica fundamental para la evaluación y diagnóstico de individuos con el
+                    síndrome de Asperger y el autismo de alto funcionamiento. Este instrumento se basa en los conocidos
+                    criterios establecidos por el propio Gillberg, un reconocido experto en trastornos del desarrollo
+                    infantil. Cada pregunta formulada en la entrevista se alinea directamente con estos criterios, lo
+                    que facilita la identificación y evaluación de los síntomas y comportamientos asociados con el
+                    Síndrome de Asperger.
+                </p>
+
+                <p class="lead">
+                    Esta conformado por 18 preguntas, <strong class="text-danger">enfocadas a pacientes de entre 3 a 6
+                        años</strong>, las cuales están enfocadas al comportamiento del lenguaje, corporal,
+                    comportamiento y expresiones que son características que tienen las personas que padecen de algún
+                    nivel dentro de trastorno de espectro autista. Si se obtienen más de 6 preguntas se podría dar un
+                    resultado, en las cuales se le dará un resumen de las características que se observan.
+                </p>
+
+                <p class="alert alert-info">
+                    <strong>NOTA DE LOS AUTORES: </strong> Esta escala está diseñada para profesionales de la salud
+                    familiarizados con el síndrome de Asperger y otros trastornos del espectro autista, sin requerir un
+                    nivel de experiencia "experto". Se fundamenta en la investigación, por lo que se espera que el
+                    evaluador otorgue puntos a cada ítem solo después de asegurarse de haber recopilado información
+                    suficiente para realizar una evaluación cualificada. Las preguntas mencionadas en la lista deben ser
+                    examinadas minuciosamente. Antes de asignar las puntuaciones. En la medida de lo posible, se debe
+                    presentar las conductas tal como están escritas, aunque en ocasiones se permite una ligera
+                    parafraseo para garantizar una cobertura adecuada de todas las áreas funcionales relevantes.
+                </p>
+            </div>
+            <div id="preguntas" class="border border-primary p-4 rounded bg-light">
+                <form *ngFor="let pregunta of preguntas; let i = index">
+                    <div class="mb-3">
+                        <label class="font-weight-bold text-primary">{{ pregunta.id }}.- {{ pregunta.pregunta }}</label>
+                    </div>
+                    <div class="justify-content-between align-items-center ">
+                        <div class="form-check">
+                            <input type="radio" [(ngModel)]="respuestas[i]" name="respuesta{{ i }}" value="si"> Sí
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" [(ngModel)]="respuestas[i]" name="respuesta{{ i }}" value="no"> No
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                </form>
+                <p class="formal-text">Total respuestas "Sí": {{ contarRespuestasSi() }}</p>
+
+                <div class="col-md-5 mx-auto p-2">
+
+                    <form [@fade]="formState" [hidden]="formState === 'disabled'" novalidate #f="ngForm" id="textInput">
+                        
+                    <div class="llamativo">
+                        <p class="textCorreoDestacado">¿Preferiría recibir los resultados por correo electrónico? Si es
+                            así, por
+                            favor, ingrese la siguiente información a continuación:</p>
+                    </div>
+                        <div class="form-group">
+                            <label id="titulitos" for="nombre">Nombre del Paciente:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required
+                                [disabled]="isFormDisabled">
+                        </div>
+                        <div class="form-group">
+                            <label id="titulitos" for="email">Email:</label>
+                            <input type="text" class="form-control" id="email" name="email" required
+                                [disabled]="isFormDisabled">
+                        </div>
+                        <div class="form-group">
+                            <label id="titulitos" for="edad">Edad:</label>
+                            <input type="text" class="form-control" id="edad" name="edad" required
+                                [disabled]="isFormDisabled">
+                        </div>
+                        <div class="form-check m-2">
+                            <input class="form-check-input" type="checkbox" [(ngModel)]="isFormDisabled"
+                                id="flexCheckDefault" (click)="toggleFormState()">
+                            <label class="form-check-label" for="flexCheckDefault">No, solo el resultado, muchas
+                                gracias.</label>
+                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <p class="mb-0" style="font-size: 9px;">Si selecciona esta opción y desea el resultado en su correo, ¡tendrá que
+                                    volver a responder el cuestionario!</p>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <button class="btn btn-outline-success btn-block m-2">Evaluar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

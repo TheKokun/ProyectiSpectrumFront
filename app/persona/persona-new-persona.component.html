@@ -1,0 +1,28 @@
+<div class="container my-3">
+  <div class="shadow-lg rounded">
+    <div class="col-md-4 mx-auto p-2">
+      <div class="card m-3 p-4">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label id="titulitos" for="nombre">Nombre del Paciente:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre_paciente" required>
+          </div>
+          <div class="form-group">
+            <label id="titulitos" for="apellido">Nombre del Padre / Tutor:</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="nombre_tutor" required>
+          </div>
+          <div class="form-group">
+            <label id="titulitos" for="email">Email:</label>
+            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+          </div>
+          <div class="form-group">
+            <label id="titulitos" for="edad">Edad:</label>
+            <input type="text" class="form-control" id="edad" name="edad" [(ngModel)]="edad" required>
+          </div>
+
+          <button class="btn btn-outline-success btn-block m-2" [disabled]="!f.valid">Siguiente</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

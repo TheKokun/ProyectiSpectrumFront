@@ -1,0 +1,54 @@
+.formal-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #038a22; /* Verde oscuro, similar al color de Bootstrap para éxito */
+    margin-top: 10px;
+  }
+/* Ajustes de estilo general */
+
+.card {
+    margin-top: 20px;
+}
+
+/* Estilo para los radio buttons */
+
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Estilo para el botón de contar respuestas */
+
+.btn-primary {
+    margin-top: 15px;
+}
+
+/* Estilos para el formulario de información de contacto */
+
+#textInput {
+    margin-top: 20px;
+}
+
+.textCorreo {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el checkbox de recibir resultados por correo */
+
+.form-check-input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+/* Otros estilos según sea necesario */
+.llamativo {
+    background-color: #fff1a0; /* Fondo amarillo para llamar la atención */
+    padding: 10px; /* Agregando un poco de espacio alrededor del contenido */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.textCorreoDestacado {
+    color: #000000; /* Texto en color naranja */
+    font-size: 15px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+}
